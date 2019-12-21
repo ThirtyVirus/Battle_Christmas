@@ -6,22 +6,22 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 import thirtyvirus.multiversion.API;
 import thirtyvirus.multiversion.XMaterial;
-import thirtyvirus.template.TemplatePlugin;
+import thirtyvirus.template.BattleChristmas;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MenuUtils {
 
-    private TemplatePlugin main = null;
-    public MenuUtils(TemplatePlugin main) { this.main = main; }
+    private BattleChristmas main = null;
+    public MenuUtils(BattleChristmas main) { this.main = main; }
 
     public static void tutorialMenu(Player player) {
         ItemStack book = new ItemStack(XMaterial.WRITTEN_BOOK.parseMaterial());
         BookMeta meta = (BookMeta) book.getItemMeta();
 
         meta.setAuthor("ThirtyVirus");
-        meta.setTitle("Welcome to TemplatePlugin!");
+        meta.setTitle("Welcome to BattleChristmas!");
 
         List<String> pages = new ArrayList<String>();
 

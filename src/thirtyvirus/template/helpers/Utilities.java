@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import thirtyvirus.multiversion.Sound;
 import thirtyvirus.multiversion.XMaterial;
-import thirtyvirus.template.TemplatePlugin;
+import thirtyvirus.template.BattleChristmas;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -108,14 +108,14 @@ public final class Utilities {
         }
 
         for (String message : messages) {
-            sender.sendMessage(TemplatePlugin.prefix + ChatColor.RESET + ChatColor.RED + message);
+            sender.sendMessage(BattleChristmas.prefix + ChatColor.RESET + ChatColor.RED + message);
         }
     }
 
     // send player a collection of messages
     public static void informPlayer(CommandSender player, List<String> messages) {
         for (String message : messages) {
-            player.sendMessage(TemplatePlugin.prefix + ChatColor.RESET + ChatColor.GRAY + message);
+            player.sendMessage(BattleChristmas.prefix + ChatColor.RESET + ChatColor.GRAY + message);
         }
     }
 

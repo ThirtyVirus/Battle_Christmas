@@ -12,12 +12,13 @@ import thirtyvirus.template.commands.MainPluginCommand;
 import thirtyvirus.template.events.block.BlockClick;
 import thirtyvirus.template.events.chat.TabComplete;
 import thirtyvirus.template.events.inventory.InventoryClick;
+import thirtyvirus.template.events.misc.SnowImpact;
 import thirtyvirus.template.helpers.Utilities;
 
 import java.io.File;
 import java.util.*;
 
-public class TemplatePlugin extends JavaPlugin {
+public class BattleChristmas extends JavaPlugin {
 
     // console and IO
     private File langFile;
@@ -27,8 +28,8 @@ public class TemplatePlugin extends JavaPlugin {
     private Map<String, String> phrases = new HashMap<>();
 
     // core settings
-    public static String prefix = "&c&l[&5&lTemplatePlugin&c&l] &8&l"; // generally unchanged unless otherwise stated in config
-    public static String consolePrefix = "[TemplatePlugin] ";
+    public static String prefix = "&c&l[&5&lBattleChristmas&c&l] &8&l"; // generally unchanged unless otherwise stated in config
+    public static String consolePrefix = "[BattleChristmas] ";
 
     // customizable settings
     public static boolean customSetting = false;
@@ -64,14 +65,15 @@ public class TemplatePlugin extends JavaPlugin {
     }
 
     private void registerCommands() {
-        getCommand("template").setExecutor(new MainPluginCommand(this));
+        getCommand("bc").setExecutor(new MainPluginCommand(this));
 
         // set up tab completion
-        getCommand("template").setTabCompleter(new TabComplete(this));
+        getCommand("bc").setTabCompleter(new TabComplete(this));
     }
     private void registerEvents() {
         getServer().getPluginManager().registerEvents(new BlockClick(this), this);
         getServer().getPluginManager().registerEvents(new InventoryClick(this), this);
+        getServer().getPluginManager().registerEvents(new SnowImpact(this), this);
     }
 
     // load the config file and apply settings

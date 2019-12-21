@@ -1,11 +1,11 @@
-main: thirtyvirus.template.TemplatePlugin
+main: thirtyvirus.template.BattleChristmas
 version: 1.0
-name: TemplatePlugin
+name: BattleChristmas
 api-version: 1.13
 
 commands:
-  template:
-    description: Main command for TemplatePlugin. Use /template help for more info
+  bc:
+    description: Main command for BattleChristmas. Use /template help for more info
 permissions:
   template.user:
     description: Allows player to use the plugin's user features
